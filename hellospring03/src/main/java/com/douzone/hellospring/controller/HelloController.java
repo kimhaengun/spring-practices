@@ -1,5 +1,12 @@
 package com.douzone.hellospring.controller;
 
+import java.io.IOException;
+import java.io.Writer;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,5 +54,20 @@ public class HelloController {
 	public String Hello6() {
 		System.out.println("hello6 call");
 		return "redirect:/hello";
+	}
+	
+	@RequestMapping("/hello7")
+	public void Hello7(HttpServletRequest req, 
+			HttpServletResponse res, 
+			HttpSession session,
+			Writer out) {
+		String no = req.getParameter("n");
+		try {
+			out.write("<h1>Http Servlet</h1>");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
