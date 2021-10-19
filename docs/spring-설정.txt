@@ -1,0 +1,15 @@
+1. maven project 생성(war)
+2. Java EE 추가(web-xml 추가)
+3. 프로젝트 - properties -> target runtime 톰캣 설정
+4. pom.xml 설정
+5. web.xml 설정 (Dispatcher servlet, Listener, Filter(encoding))
+   -/WEB-INF/applicationContext.xml (root application context)
+   -/WEB-INF/spring-servlet.xml     (web application context)
+6. package 구성 및 코드 작업
+   ex) com.douzone.mysite.controller
+       com.douzone.mysite.repository
+       com.douzone.mysite.service
+       com.douzone.mysite.vo
+7. /WEB-INF/views/*.jsp 파일 작성
+8. controller, repository, service, vo 클래스 생성 (작업)
+
