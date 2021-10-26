@@ -14,17 +14,17 @@
 	</properties>
 
 	<dependencies>
-		<!--Spring context -->
+		<!-- Spring Context(Container) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
 
-
+		<!-- test -->
 	</dependencies>
 
 	<build>
 		<finalName>container</finalName>
-	</build>
-</project>
+	</build>		
+</project> 
