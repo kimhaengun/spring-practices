@@ -12,6 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.douzone.container.soundsystem.CDPlayer;
+import com.douzone.container.videosystem.DVDPlayer;
+import com.douzone.container.videosystem.DigitalVideoDisc;
 
 //Test Container 생성
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -19,19 +21,22 @@ import com.douzone.container.soundsystem.CDPlayer;
 public class DVDPlayerJavaConfigTest {
 	@Rule
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+	
 	@Autowired
-	private CDPlayer cdplayer;
-	
-	@Test
-	public void testCDPlayerNotNull() {
-		//notnull 체크
-		assertNotNull(cdplayer);
-	}
-	
-	@Test
-	public void testPlay() {
-		cdplayer.play();
-		assertEquals("Playing 붕붕 by 김하온",systemOutRule.getLog().replace("\r\n", ""));
-	}
+	private DigitalVideoDisc dvd;
 
+	@Autowired
+	private DVDPlayer dvdplayer;
+	
+	@Test
+	public void testDVDNotNull() {
+		assertNotNull(dvd);
+	}
+	
+	@Test
+	public void testDVDPlayerNotNull() {
+		//notnull 체크
+		assertNotNull(dvdplayer);
+	}
+	
 }
