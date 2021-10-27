@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.douzone.container.config.soundsystem.CDPlayerConfig;
+import com.douzone.container.videosystem.DVDPack;
 import com.douzone.container.videosystem.DigitalVideoDisc;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -54,6 +55,21 @@ public class DVDPlayerXmlConfigTest {
 	@Qualifier("avengersDirectorEdition")
 	private DigitalVideoDisc dvd7;
 
+	@Autowired
+	private DVDPack dvdpack; //하나밖에 없어서 qualifier 필요없다
+
+	@Autowired
+	@Qualifier("avengersExpansionEdition1")
+	private DigitalVideoDisc dvd8;
+	
+	@Autowired
+	@Qualifier("avengersExpansionEdition2")
+	private DigitalVideoDisc dvd9;
+
+	@Autowired
+	@Qualifier("avengersExpansionEdition3")
+	private DigitalVideoDisc dvd10;
+
 	//id가 없어서 주입을 못함
 	@Ignore
 	@Test
@@ -89,5 +105,26 @@ public class DVDPlayerXmlConfigTest {
 	@Test
 	public void testDvd1NotNull7() {
 		assertNotNull(dvd7);
+	}
+	
+	@Test
+	public void testDvdPackNotNull() {
+		System.out.println(dvdpack);
+		assertNotNull(dvdpack);
+	}
+	
+	@Test
+	public void testDvd1NotNull8() {
+		assertNotNull(dvd8);
+	}
+	
+	@Test
+	public void testDvd1NotNull9() {
+		assertNotNull(dvd9);
+	}
+	
+	@Test
+	public void testDvd1NotNull10() {
+		assertNotNull(dvd10);
 	}
 }

@@ -8,6 +8,28 @@ public class BlankDisc implements DigitalVideoDisc {
 	private String studio;//영화사
 	private List<String> actors;
 	
+	//property 사용시 기본생성자, setter 필요함
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setStudio(String studio) {
+		this.studio = studio;
+	}
+
+	public void setActors(List<String> actors) {
+		this.actors = actors;
+	}
+
+	public BlankDisc() {
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "BlankDisc [title=" + title + ", studio=" + studio + ", actors=" + actors + "]";
+	}
+
 	public BlankDisc(String title, String studio) {
 		this.title=title;
 		this.studio=studio;
