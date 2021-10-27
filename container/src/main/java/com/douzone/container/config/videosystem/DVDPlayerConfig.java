@@ -40,4 +40,12 @@ public class DVDPlayerConfig {
 		dp.setDvd(dvd);
 		return dp;
 	}	
+	
+	//같은 타입의 빈을 생성할 경우
+	@Bean(name = "dvdPlayer04")
+	public DVDPlayer dvdPlayer04(DigitalVideoDisc dvd) {
+		DVDPlayer dp = new DVDPlayer();
+		dp.setDvd(dvd);
+		return dp;
+	}	
 }

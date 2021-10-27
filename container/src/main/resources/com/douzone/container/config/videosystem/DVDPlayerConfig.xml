@@ -100,6 +100,8 @@
 		p:studio="MARVEL"
 		p:actors-ref="actorList"/>
 
+	<!-- DI  -->
+	
 	<!-- 12.빈주입 : 생정자1 -->
 	<bean id="dvdPlayer1" class="com.douzone.container.videosystem.DVDPlayer">
 		<constructor-arg ref="ironMan" />
