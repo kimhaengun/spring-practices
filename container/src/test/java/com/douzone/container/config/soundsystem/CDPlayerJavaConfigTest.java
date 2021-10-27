@@ -12,7 +12,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.douzone.container.soundsystem.CDPlayer;
-import com.douzone.container.soundsystem.CompactDisct;
 
 //Test Container 생성
 @RunWith(SpringJUnit4ClassRunner.class)
