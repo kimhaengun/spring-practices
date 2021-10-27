@@ -1,9 +1,26 @@
 package com.douzone.container.user;
 
+import java.util.List;
+
 public class User {
+	
 	private Long no = 0L;
 	private String name = "므므";
+	private Friend friend;
+	private List<String> friends;
 	
+	@Override
+	public String toString() {
+		return "User [no=" + no + ", name=" + name + ", friend=" + friend + ", friends=" + friends + "]";
+	}
+
+	public void setFriends(List<String> friends) {
+		this.friends = friends;
+	}
+	
+	public void setFriend(Friend friend) {
+		this.friend = friend;
+	}
 	public User() {
 		
 	}
@@ -14,10 +31,7 @@ public class User {
 		this.no = no;
 		this.name = name;
 	}
-	@Override
-	public String toString() {
-		return "User [no=" + no + ", name=" + name + "]";
-	}
+	
 	public void setNo(Long no) {
 		this.no = no;
 	}
